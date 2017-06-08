@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      prefix="og: http://opengraphprotocol.org/schema/ fb: http://www.facebook.com/2010/fbml d: http://dictionary.com/2011/dml">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <base href="http://www.dictionary.com/">
+        <title>Eight food idioms that are right under your nose by Dictionary.com</title>
+        <script type="text/javascript">
+    var cookiesManager = function (){
+        'use strict';
+
+        var persistentValues = [];
+
+        return {
+            getCookieValue : function(name) {
+                var value = null,
+                    cookies = document.cookie,
+                    searchedCookie = cookies.indexOf(" " + name + "=");
+
+                // it's worth to check, if cookie is not first cookie
+                if (searchedCookie === -1) {
+                    var checkFirstCookie = cookies.indexOf(name + "=");
+                    searchedCookie = checkFirstCookie == 0 ? 0 : -1;
+                }
+
+                if (searchedCookie > -1) {
+                    var startPositionOfValue = cookies.indexOf("=", searchedCookie) + 1,
+                        endPositionOfValue = cookies.indexOf(";", searchedCookie);
+
+                    if (endPositionOfValue === -1) {
+                        endPositionOfValue = searchedCookie.length;
+                    }
+
+                    value = cookies.substring(startPositionOfValue,endPositionOfValue);
+                }
+
+                return value;
+            },
+
+            setCookie: function(name, value, hours, domain) {
+                var expires = '',
+                    domain  = domain || UrlHelper.getCurrentDomain();
+
+                if(hours !== undefined) {
+                    var now     = new Date(),
+                        time    = now.getTime();
+
+                    time += (3600 * hours) * 1000;
+                    now.setTime(time);
+
+                    expires = ';expires=' + now.toGMTString();
+                }
+
+                document.cookie =
+                    name + '=' + value +
+                        expires +
+                        ';path=/' +
+                        ';domain=' + domain;
+            },
+
+            /*
+            * This method ensures, that everywhere on the page value of cookie will be the same.
+            * It's important in case of cookie, which value can change across the page.
+            */
+            getPersistentCookieValue: function(name) {
+                if (typeof persistentValues[name] === 'undefined') {
+                    persistentValues[name] = this.getCookieValue(name);
+                    // after reading value, cookie has to be removed
+                    this.setCookie(name, null, -1);
+                }
+
+                return persistentValues[name];
+            }
+        }
+    }();
+</script><script type="text/javascript">
+    /*jslint browser: true */
+
+    var UrlHelper = function() {
+        var COOKIE_DOMAIN_THESAURUS     = '.thesaurus.com';
+        var COOKIE_DOMAIN_DICTIONARY    = '.dictionary.com';
+        var COOKIE_DOMAIN_REFERENCE     = '.reference.com';
+
+        var domain = null;
+        var currentURL = null;
+        var spanidsUrl = null;
+
+        function getSpanidsUrl(bid, sid, currentDomain) {
+            var url     = 'http://';
+            var source  = '';
+
+            if(currentDomain == COOKIE_DOMAIN_DICTIONARY) {
+                url += 'spanids.reference.com/?';
+                source = 'd';
+            } else if (currentDomain == COOKIE_DOMAIN_REFERENCE){
+                url += 'spanids.dictionary.com/?';
+                source = 'r';
+            } else {
+                url += 'spanids.dictionary.com/?';
+                source = 't';
+            }
+
+            url += 'bid=' + bid + '&asid=' + sid + '&bidnew=1&asidnew=1&source=' + source + '&site=app';
+
+
+            return url;
+        }
+
+        function getCurrentDomain() {
+            var host = window.location.host;
+            var value = "";
+            if(host.indexOf(COOKIE_DOMAIN_THESAURUS) > -1) {
+                value = COOKIE_DOMAIN_THESAURUS;
+            } else if(host.indexOf(COOKIE_DOMAIN_DICTIONARY) > -1) {
+                value = COOKIE_DOMAIN_DICTIONARY;
+            } else if(host.indexOf(COOKIE_DOMAIN_REFERENCE) > -1){
+                value = COOKIE_DOMAIN_REFERENCE;
+            }
+
+            return value;
+        }
+
+        return {
+            getCurrentDomain : function() {
+                if(domain === null) {
+                    domain = getCurrentDomain();
+                }
+                return domain;
+            },
+
+            getCurrentDomainFromRequest : function() {
+                return window.location.host;
+            },
+
+            getCurrentUrl : function() {
+                if(currentURL === null) {
+                    currentURL = window.location.protocol + "//" + window.location.host + "" + window.location.pathname;
+                }
+                return currentURL;
+            },
+
+            getSpanidsUrl : function(bid, sid, domain) {
+                if(spanidsUrl === null) {
+                    spanidsUrl = getSpanidsUrl(bid, sid, domain);
+                }
+
+                return spanidsUrl;
+            }
+        }
+    }();
+</script><script>
+    var DARCI = DARCI || {},
+        u = "http://track.dictionary.com/main.gif?ev=p&pn=slideshow&st=dict&ab=&dc=desktop",
+        s = location.search.match(new RegExp('[\?\&]s=([^\&]*)(\&?)', 'i')),
+        ms = (typeof ms === 'undefined') ? cookiesManager.getCookieValue('mseg') || "" : ms,
+
+        /**
+         * Because this file is added only in case when CSL is enabled,
+         * we can be sure cookieManager will be available.
+         */
+        refQuery = cookiesManager.getPersistentCookieValue('ReferrerQuery'),
+        query, orgQuery;
+
+    DARCI.SearchBoxClickLinkId = '59wn52';
+
+    
+
+    if (s != null && s[1]) {
+        if (s[1] == 't' || s[1] == 'ts' || s[1] == 'tn') {
+            var ev = u.indexOf('ev=');
+            if (ev !== -1) {
+                ev = ev + 3;
+                u = u.slice(0, ev) + 'c' + u.slice(ev) + '&cl=59wn52&sc=1';
+                u = u.replace('%25%25REFQUERY%25%25', refQuery);
+            }
+        }
+    }
+
+    new Image().src = u + "&ms=" + ms + "&rf=" + encodeURIComponent(document.referrer) + "&cb=" + Math.floor((Math.random() * 899999999) + 100000000);
+</script>
+<script type="text/javascript">
+    var src = null;
+    </script><meta property="og:title" content="Eight food idioms that are right under your nose by Dictionary.com" /><meta property="og:image" content="http://static.sfdict.com/assets/2024-8234452-20.jpeg" /><meta property="og:type" content="object" /><meta property="og:url" content="http://www.dictionary.com/slideshows/food-idioms" /><meta property="og:site_name" content="Dictionary.com" /><meta name="twitter:card" content="summary" /><meta name="twitter:url" content="http://www.dictionary.com/slideshows/food-idioms" /><meta name="twitter:title" content="Eight food idioms that are right under your nose by Dictionary.com" /><meta name="twitter:image" content="http://static.sfdict.com/assets/2024-8234452-20.jpeg" /><meta name="twitter:site" content="@dictionaryco" /><meta name="twitter:creator" content="@dictionaryco" /><link rel="shortcut icon" href="http://static.sfdict.com/dcom/favicon.ico" /><link rel="canonical" href="http://www.dictionary.com/slideshows/food-idioms" /><link rel="stylesheet" href="http://static.sfdict.com/dcom/css/slideshow-03009.css" type="text/css" media="all" /><script type="text/javascript">
+    var searchURL = "http://www.dictionary.com/browse/%40%40queryText%40%40?s=t";var pageName = "slideshow";</script>
+<script type="text/javascript">
+var adStatus = {
+    spotsCount: 2,
+    renderedSpots: [],
+    renderedSpotsCount: 0,
+    displayedSpots: [],
+    set: function(name, size) {
+        this.renderedSpots[name] = {
+            size: size
+        };
+    },
+    get: function(name) {
+        return this.renderedSpots[name];
+    },
+    getSlotKey: function(slot) {
+        var slotKey;
+        for (slotKey in googletag.slots) {
+            if(googletag.slots[slotKey] == slot) {
+                break;
+            }
+        }
+        return slotKey;
+    },
+    adsLoaded: function() {
+        return this.renderedSpotsCount >= this.spotsCount;
+    }
+};
+
+
+var handleSlotRender = function(data) {
+    var key = adStatus.getSlotKey(data.slot);
+    adStatus.set(key, data.size);
+    adStatus.renderedSpotsCount += 1;
+    };
+</script><script type="text/javascript">
+    "use strict";
+
+    var adStart = Date.now(),
+        OX_dfp_ads = [["/23219321/iac.dict.dictry.dw/slide_show/homepage/channel",["728x90","970x90"],"dcomSSHOW-728x90",{'pos':'top','pos2':'728x90_1',}],["/23219321/iac.dict.dictry.dw/slide_show/homepage/channel",["300x250"],"dcomSSHOW-300x250",{'pos':'top','pos2':'300x250_1',}],],
+        attachScriptAsync, targetingComplete ,oxDone,
+        gptCallIntiated = false,
+        completedTargeting = {},
+        gptApp = gptApp || {},
+        googletag = googletag || {},
+        targetingEvtResponseTime = [],
+        gptLoaded = false,
+        isBlocking = false;
+
+    gptApp.ads = gptApp.ads || [];
+    googletag.cmd = googletag.cmd || [];
+
+    attachScriptAsync = function(scriptInfo, callback) {
+
+        /* Method to inject script dynamically to have async support */
+
+        var tag = document.createElement("script"),
+            p, node = document.getElementsByTagName("script")[0];
+
+        tag.async = true;
+        tag.onload = tag.onerror = function() {
+            typeof callback === 'function' && callback()
+        }
+
+        for (p in scriptInfo) {
+            if (scriptInfo.hasOwnProperty(p) && p != "src") {
+                tag[p] = scriptInfo[p];
+            }
+        }
+        tag.src = scriptInfo.src;
+        node.parentNode.insertBefore(tag, node);
+    };
+
+    gptApp.renderAds = function() {
+
+        /* Render ad slot display after all targeting setup Adslots are pushed into gptApp array  */
+        var len = gptApp.ads.length;
+        for (var i = 0 ; i < len ; i++) {
+            gptApp.ads[i]();
+        }
+
+        gptApp.ads.push = function(fn) {
+            if ("function" === typeof fn) {
+                setTimeout(fn, 0);
+            }
+        };
+    };
+
+    targetingComplete = function(event) {
+        // enable and render ads for GPT services call that now all targeting finished
+        completedTargeting[event] = true;
+
+        if(!gptCallIntiated ) {
+            // Measuring Each target event time to calculate timeout
+            targetingEvtResponseTime.push(event+"|"+(Date.now() - adStart));
+
+            if ((completedTargeting.amz && completedTargeting.ox) || event == "fallback") {
+                 gptCallIntiated = true;
+                googletag.cmd.push(function(){
+                    googletag.enableServices();
+                    googletag.pubads().setTargeting("perf", targetingEvtResponseTime);
+                });
+                gptApp.renderAds();
+            }
+        }
+    };
+
+    oxDone = function(events) {
+        /* Global Callback Function invoked by OpenX to inform price support */
+        googletag.cmd.push(function() {
+            //OPEN X GPT targeting Params
+            try {
+                OX.dfp_bidder.setOxTargeting(googletag.pubads().getSlots());
+            } catch (e) {}
+        });
+        targetingComplete("ox");
+    };
+
+    // Google Publisher Tag
+    attachScriptAsync({ src: "//www.googletagservices.com/tag/js/gpt.js"  }, function () {
+        if (typeof window.DARCI !== 'undefined' && typeof window.DARCI.gptLoadedCallback === 'function')
+            window.DARCI.gptLoadedCallback();
+    });
+
+    // AMAZON Bidder Tag
+    attachScriptAsync({
+        src: "//c.amazon-adsystem.com/aax2/amzn_ads.js",
+        onload : function () {
+            try {
+                amznads.getAdsCallback('3067', function(){
+                    googletag.cmd.push(function() {
+                        // Amazon GPT targeting Params
+                        amznads.setTargetingForGPTAsync('yip4');
+                    });
+                    targetingComplete("amz");
+                }, 1000);
+            } catch (e) { /* ignore */ }
+        }
+    });
+
+    // OPEN X Bidder Tag
+    attachScriptAsync({
+        src: "//ox-d.ask.servedbyopenx.com/w/1.0/jstag?nc=23219321-dictionary",
+        onload: function() {
+            setTimeout(function() {
+                if (!('OX' in window)) {
+                    targetingComplete("ox");
+                }
+            }, 500);
+        }
+    });
+
+    // Fallback Method to invoke ad after 1000 miliseconds irrespective of targeting scripts
+
+    setTimeout(function() {
+        targetingComplete("fallback");
+    }, 1500);
+
+</script>
+
+<script>
+    function getRefValue(referrer) {
+        if(referrer.indexOf('dictionary.com') == -1 && referrer.indexOf('thesaurus.com') == -1 && referrer.indexOf('reference.com') == -1) {
+            return 'organic';
+        }
+        return 'direct';
+    }
+    function getRPV() {
+        return Math.floor((Math.random()*100)+1).toString();
+    }
+    function getDCRefValue() {
+        return encodeURIComponent(window.location.href);
+    }
+    function getDayofWeek() {
+        return new Date().getDay().toString();
+    }
+    
+    googletag.slots = {};
+    googletag.cmd.push(function() {
+
+        googletag.slots["dcomSSHOW-728x90"] = googletag.defineSlot("/23219321/iac.dict.dictry.dw/slide_show/homepage/channel", [[728,90],[970,90]], "dcomSSHOW-728x90").addService(googletag.pubads()).setTargeting("pos", "top").setTargeting("pos2", "728x90_1").setTargeting("tx1", "slide_show").setTargeting("tx2", "homepage").setTargeting("ptype", "channel");googletag.slots["dcomSSHOW-300x250"] = googletag.defineSlot("/23219321/iac.dict.dictry.dw/slide_show/homepage/channel", [300,250], "dcomSSHOW-300x250").addService(googletag.pubads()).setTargeting("pos", "top").setTargeting("pos2", "300x250_1").setTargeting("tx1", "slide_show").setTargeting("tx2", "homepage").setTargeting("ptype", "channel");
+        googletag.pubads().setTargeting("ref", getRefValue(document.referrer)).setTargeting("lang","en").setTargeting("rpv", getRPV()).setTargeting("dc_ref", getDCRefValue()).setTargeting("loc", "US").setTargeting("ld", "0").setTargeting("dow", getDayofWeek());
+
+        var get_request_identifier = (function () {
+                return Math.random().toString(36).substr(2)
+            })(),
+            get_modified_page_url = (function () {
+                sep = window.location.search.length >= 0 && window.location.href.indexOf("?") !== -1 ? "&" : "?";
+                return window.location.href + sep + "rquid=" + get_request_identifier
+            })();
+
+        googletag.pubads().setTargeting("rquid",get_request_identifier);
+        googletag.pubads().setTargeting("page_url",get_modified_page_url);
+
+        
+                var adtest = location.search.match(new RegExp("[\?\&]adtest=([^\&]*)(\&?)","i"));
+        if(adtest != null && adtest[1] != "" ){
+            googletag.pubads().setTargeting("adtest",adtest[1]);
+        }
+
+                googletag.pubads().enableSingleRequest();
+                        googletag.pubads().enableAsyncRendering();
+                
+        googletag.pubads().addEventListener('slotRenderEnded', handleSlotRender);
+    });
+</script>
+<script type='text/javascript'>
+    window.dataLayer = window.dataLayer || [];
+
+    dataLayer.push({
+        'event': 'pageview',
+        'device': 'Desktop',
+        'pageName': 'slideshow',
+        'LDid': '0',
+        'mseg': "77",
+        'sessionId': "810214-1496644369103",
+        'browserId': "273577-1481169866363"    });
+</script><!-- Begin Quantcast Tag, part 1 -->
+<script type="text/javascript"> 
+  
+  var _qevents = _qevents || [];
+
+  (function() {
+   var elem = document.createElement('script');
+
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);  
+  })();
+</script>
+<!-- End Quantcast Tag, part 1 -->
+    </head>
+    <body >
+            <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXC5GP" height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+        j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j, f);
+    })(window,document,'script','dataLayer','GTM-TXC5GP');
+</script>
+<!-- End Google Tag Manager --><nav id="nav" class="visible-xs">
+    <ul>
+        <li><a href="http://www.thesaurus.com/" data-linkid="c1drjk" >Thesaurus</a></li>
+        <li><a href="http://translate.reference.com/" data-linkid="au3zd1" >Translate</a></li>
+        <li><a href="http://www.dictionary.com/fun" data-linkid="yp2k17" >Puzzles & Games</a></li>
+        <li><a href="http://www.dictionary.com/wordoftheday/" data-linkid="1498ik" >Word of the Day</a></li>
+        <li><a href="http://blog.dictionary.com/" data-linkid="t6ehki" >Blog</a></li>
+
+        
+        <li><a href="http://app.dictionary.com/appswall" data-linkid="jmrau8" >Apps by Dictionary</a></li>
+    </ul>
+</nav>
+
+<script type="text/javascript">
+        /**
+     * Redirects user to address from parameter
+     *
+     * @param url
+     * @returns {boolean}
+     */
+    function submitForm(url) {
+        var queryText = document.getElementById('q').value || 'search';
+
+        queryText = encodeURIComponent(queryText);
+
+        url = url.replace('%40%40queryText%40%40', queryText);
+
+                location.href = url;
+        return false;
+    }
+
+    function prepareSearchBox(el) {
+        var dataTerm = el.getAttribute('data-term');
+        var value = el.value;
+        if (!(/(iPad|iPhone|iPod)/g.test(navigator.userAgent))) {
+            el.focus();
+            if (dataTerm == value) {
+                el.select();
+            }
+        }
+    }
+</script>
+
+<header id="responsive-header" class="js-header dictionary-header">
+    <div class="header-container">
+        <div class="right-menu">
+            <ul class="loginSpace">
+                                    <li class="user-logged-out"><a href="http://app.dictionary.com/login/core?source=header_core&logindest=http://www.dictionary.com/slideshows/food-idioms?prev=umwords.obviously">Log In</a></li>
+                            </ul>
+            <ul class="social">
+                <li><a href="http://www.facebook.com/dictionarycom"  class="facebook-icon" data-linkid="79499m" ></a></li>
+                <li><a href="https://twitter.com/dictionarycom"  class="twitter-icon" data-linkid="ataz0h" ></a></li>
+                <li><a href="https://plus.google.com/+Dictionary"  class="google-icon" data-linkid="6fpttk" ></a></li>
+            </ul>
+            <p>follow Dictionary.com</p>
+        </div>
+        <div class="header-row">
+            <div class="app-name-space">
+                <div class="app-name-space">
+                    <a href="http://www.dictionary.com/" data-linkid="yg487x" >                    <img src="http://static.sfdict.com/dcom/img/responsive/dcom-logo-8f31c.png" alt="Dictionary.com" class="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="app-content">
+                <nav class="nav-space">
+                    <ul>
+                        <li class="nav-active">
+                            <a href="http://www.dictionary.com/" data-linkid="tqks0v" >Dictionary</a>
+                                                            <div class="small-arrow"></div>
+                                                    </li>
+                        <li>
+                            <a href="http://www.thesaurus.com/" data-linkid="qxnxzj" >Thesaurus</a>
+                                                    </li>
+                        <li class="nopad ">
+                            <a href="http://translate.reference.com/" data-linkid="s6ljc3" >Translate</a>
+                                                    </li>
+                        <li class="nav-more-button" onclick="">
+                            <span class="nav-links">More...</span>
+                            <ul class="drop-down-list-header">
+                                <li><a href="http://blog.dictionary.com/" data-linkid="prrhwm" >Our Blog</a></li>
+                                <li><a href="http://www.dictionary.com/fun/crossword" data-linkid="dp2158" >Daily Crossword</a></li>
+                                <li><a href="http://www.dictionary.com/fun/crosswordsolver" data-linkid="6g2ifa" >Crossword Solver</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hamburger-space  visible-xs">
+                    <div id="hamburgerButton" class="js-hamburgerButton button-hamburger"></div>
+                </div>
+                <div class="search-box-space">
+                    <div class="u-row">
+                        <form id="main_search" class="search-form" action="http://www.dictionary.com/dic">
+                            <fieldset>
+                                <div class="search-input">
+                                    <input type="text" value="" autoComplete="off" autocapitalize="off" autocorrect="off" name="q" class="form-control input-lg transparent-text" id="q" data-term="">
+                                                                        <input type="hidden" name="s" value="t"/>
+                                    <input type="button" id="search-clear" class="search-clear" />
+                                    <input type="submit" id="search-submit" class="search-submit" value="Search"/>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script type="text/javascript">
+    var DARCI = DARCI || {};
+    DARCI.searchedTerm = typeof DARCI.OQR !== 'undefined' ? DARCI.OQR.getValue() : null;
+    DARCI.searchedTerm = DARCI.searchedTerm !== null ? DARCI.searchedTerm : '';
+
+    document.getElementById('main_search').onsubmit = function(e, url) {
+        // if url parameter wasn't passed submitFrom() is called with default parameter, which is searchURL
+        // searchURL is defined and added as a global js option in controller
+        return submitForm(url || searchURL);
+    }
+
+    prepareSearchBox(document.getElementById('q'));
+
+    cookiesManager.setCookie('ReferrerQuery', DARCI.searchedTerm);
+</script>
+<div id="header-lb-container">
+    </div>
+<script type="text/javascript">
+    var ResponsiveHeaderUtils = (function () {
+
+        function disableStickyForIDevices() {
+            var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+            if (iOS) {
+                var body = document.querySelectorAll('body');
+                body[0].className += ' ' + 'js-is-iDevice';
+            }
+        }
+
+        function disableStickyForAndroid() {
+            var android = /(Android)/g.test(navigator.userAgent);
+
+            if (android) {
+                var body = document.querySelectorAll('body');
+                body[0].className += ' ' + 'js-is-Android';
+            }
+        }
+
+        return {
+            init: function () {
+                disableStickyForIDevices();
+                disableStickyForAndroid();
+            }
+        }
+    }());
+
+    ResponsiveHeaderUtils.init();
+</script>
+<script type="text/javascript">
+    var phpVarinJS = {
+        'flogoClick': 'http://track.dictionary.com/track/clickInner?site=dict&pageName=slideshow&ldid=0&target=dict-logo',
+        'prevWordsClick':'http://track.dictionary.com/track/clickInner?site=dict&pageName=slideshow&ldid=0&target=previous-words',
+        'socialClick':'http://track.dictionary.com/track/social?site=dict&pageName=slideshow&ldid=0',
+        'favoritesAppUrl':'http://app.dictionary.com/favorites',
+        'stickyFooter':'http://track.dictionary.com/track/stickyFooter?site=dict&pageName=slideshow&ldid=0',
+        'cornerPeelGif':'false',
+        'cornerPeelFlash':'false',
+        'gifCloseButtonImage':'',
+        'flashCloseButtonImage':'',
+        'cornerPeelGifHrefURL':'',
+        'cornerPeelFlashHrefURL':'',
+        'cornerPeelOpeninNewwindow':'false',
+        'slideShowBaseURL':'http://www.dictionary.com/',
+        'appDomainURL':'http://www.dictionary.com/',
+        'appcoreURL':'http://app.dictionary.com/',
+        'slideShowCloseTrackURL': 'http://track.dictionary.com/track/close?site=dict&pageName=slideshow&ldid=0',
+        'DictionaryHp':'dictionary'
+    }
+
+    var addthis_share = {
+        email_template: "share_template",
+        email_vars: { title: "Eight food idioms that are right under your nose", hpUrl: "http://www.dictionary.com/"  }
+    }
+</script>
+<div id="main">
+    <div class="banner-holder" id="dcomad_728x90_0" style="width:728px;min-height:94px;">
+        <div id="dcomSSHOW-728x90"><script type="text/javascript">adStatus.displayedSpots.push("dcomSSHOW-728x90");gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSSHOW-728x90");});});</script></div>    </div>
+    <div class="content">
+        <div class="slideshow">Slideshow</div>
+        <div class="title">
+            <span>Eight food idioms that are right under your nose</span>
+        </div>
+        <div class="slide-container">
+                            <a href="http://www.dictionary.com/slideshows/umwords#obviously"  id="prevSlideshowLink"  style="display:none;" data-cts='{"linkId":"ewfsu9","infix":"","domain":"dictionary.com","clkpage":"slideshow","clkmod":"","clksite":"dict","clkld":0}'></a>
+                        <a class="btn active prev" data-prev="umwords.obviously"></a>
+            <a class="btn active next"></a>
+                                    <div class="slide slide_0">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-20.jpeg" alt="nutshell" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#nutshell">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="The term in a nutshell refers to a short description, or a story told in no more words than can physically fit in the shell of a nut. But the origin of the term tests those limits with the most longwinded of tales. The ancient Roman encyclopaedist Pliny the Elder claimed that a copy of Homer's The Iliad existed that was small enough to fit inside a walnut shell. Almost 2000 years later in the early 1700s the Bishop of Avranches tested Pliny's theory by writing out the epic in tiny handwriting on a walnut-sized piece of paper and lo and behold, he did it!" addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=nutshell"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Nutshell                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/N02/N0271300.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/N02/N0271300.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [<span class="dbus_pron_b">nuht</span>-shel]                        </div>
+                        <div class="bodyText">
+                            The term <b>in a nutshell</b> refers to a short description, or a story told in no more words than can physically fit in the shell of a nut. But the origin of the term tests those limits with the most longwinded of tales. The ancient Roman encyclopaedist Pliny the Elder claimed that a copy of Homer's <em>The Iliad</em> existed that was small enough to fit inside a walnut shell. Almost 2000 years later in the early 1700s the Bishop of Avranches tested Pliny's theory by writing out the epic in tiny handwriting on a walnut-sized piece of paper and lo and behold, he did it!                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_1">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-22.jpg" alt="beans" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#beans">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="English speakers have been using the word 'spill' to mean 'divulge secret information' since 1547, but the spilling of beans in particular may predate the term by millennia. Many historians claim that secret societies in ancient Greece voted by dropping black or white beans into a clay urn. To spill those beans would be to reveal the results of a secret vote before the ballots had been counted. Kidney he lives, pinto he dies!" addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=beans"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Beans                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/B01/B0176000.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/B01/B0176000.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [been]                        </div>
+                        <div class="bodyText">
+                            English speakers have been using the word "spill" to mean "divulge secret information" since 1547, but the spilling of <b>beans</b> in particular may predate the term by millennia. Many historians claim that secret societies in ancient Greece voted by dropping black or white beans into a clay urn. To spill <em>those</em> beans would be to reveal the results of a secret vote before the ballots had been counted. <em>Kidney he lives, pinto he dies!</em>                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_2">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-24.jpg" alt="pie" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#pie">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="As many of us know from experience, it is not so easy to make a pie. A buttery crust can fall apart in the deftest of hands and around Thanksgiving many pumpkin 'pies' might be more accurately deemed pumpkin 'soups.' On the other hand (or for our purposes) anyone can become an expert at eating a pie. Popularized in the U.S. in the late 1800s, the most notable use of pie to mean 'simple and pleasurable' appears in Mark Twain's The Adventures of Huckleberry Finn. Part of our next food idiom makes a home in many pies, especially in America." addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=pie"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Pie                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/P04/P0435200.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/P04/P0435200.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [pahy]                        </div>
+                        <div class="bodyText">
+                            As many of us know from experience, it is not so easy to make a pie. A buttery crust can fall apart in the deftest of hands and around Thanksgiving many pumpkin "pies" might be more accurately deemed pumpkin "soups." On the other hand (or for our purposes) anyone can become an expert at eating a pie. Popularized in the U.S. in the late 1800s, the most notable use of <b>pie</b> to mean "simple and pleasurable" appears in Mark Twain's <em>The Adventures of Huckleberry Finn</em>. Part of our next food idiom makes a home in many pies, especially in America.                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_3">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-26.jpg" alt="apples" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#apples">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="Apples and oranges refers to two incommensurable items, i.e. a comparison of things that cannot be compared. Though they are both fruits, apples and oranges are separated by color, taste, juiciness and 89.2 million years of evolution. The idiom first appeared as apples and oysters in John Ray's 1670 Proverb collection, and equivalent terms exist in many languages: 'grandmothers and toads' in Serbian to 'love and the eye of an axe' in Argentine Spanish. What other funny fruits turn unusual phrases?" addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=apples"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Apples                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/A06/A0612600.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/A06/A0612600.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [<span class="dbus_pron_b">ap</span>-<span class="dbus_pron_i">uh</span>lz]                        </div>
+                        <div class="bodyText">
+                            <b>Apples and oranges</b> refers to two incommensurable items, i.e. a comparison of things that cannot be compared. Though they are both fruits, apples and oranges are separated by color, taste, juiciness and 89.2 million years of evolution. The idiom first appeared as <em>apples and oysters</em> in John Ray's 1670 Proverb collection, and equivalent terms exist in many languages: "grandmothers and toads" in Serbian to "love and the eye of an axe" in Argentine Spanish. What other funny fruits turn unusual phrases?                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_4">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-28.jpg" alt="bananas" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#bananas">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="Not only does going bananas mean 'to go crazy,' the term can point to things for which you've gone bananas, or obsessions. According to lexicographer E.J. Lighter, going bananas refers to the term going ape often used in American popular culture in the second half of the 1900s. Apes were seen as crazy by the mid-century media, and what do apes eat? Bananas! For example, here at Dictionary.com, we're bananas for grammar but we go bananas when people end sentences with prepositions." addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=bananas"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Bananas                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/B00/B0070700.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/B00/B0070700.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [b<span class="dbus_pron_i">uh</span>-<span class="dbus_pron_b">nan</span>-<span class="dbus_pron_i">uh</span>z]                        </div>
+                        <div class="bodyText">
+                            Not only does <b>going bananas</b> mean "to go crazy," the term can point to things <em>for which</em> you've gone bananas, or obsessions. According to lexicographer E.J. Lighter, <em>going bananas</em> refers to the term <em>going ape</em> often used in American popular culture in the second half of the 1900s. Apes were seen as crazy by the mid-century media, and what do apes eat? Bananas! For example, here at Dictionary.com, we're bananas for grammar but we go bananas when people end sentences with prepositions.                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_5">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-30.jpg" alt="tea" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#tea">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="Though English is spoken all over the world, there are certain idioms that recall its, well, Englishness. Popularized in British Edwardian slang, cup of tea originally referred to something pleasant or agreeable. The negative usage as in not my cup of tea arose during World War II as a more polite way to say you didnt like something. 'You dont say someone gives you a pain in the neck,' explained Alister Cooke in his 1944 Letter from America. You just remark, he's not my cup of tea.''" addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=tea"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Tea                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/T00/T0093200.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/T00/T0093200.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [tee]                        </div>
+                        <div class="bodyText">
+                            Though English is spoken all over the world, there are certain idioms that recall its, well, Englishness. Popularized in British Edwardian slang, <b>cup of tea</b> originally referred to something pleasant or agreeable. The negative usage as in <em>not my cup of tea</em> arose during World War II as a more polite way to say you didnt like something. "You dont say someone gives you a pain in the neck," explained Alister Cooke in his 1944 Letter from America. You just remark, he's not my cup of tea.'"                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_6">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-32.jpg" alt="cheese" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#cheese">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="Perhaps the savoriest idiom on this list, the word cheese can refer to a person or thing that is important or splendid as well as to the delicious dairy product. The usage is thought to have origins in Urdu, from the Persian chiz meaning 'thing.' In common usage, 'the big cheese' is a person of importance or authority, and cheese is often associated with smiling, based on the 'say cheese' method of posing for pictures." addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=cheese"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Cheese                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/C03/C0360600.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/C03/C0360600.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [cheez]                        </div>
+                        <div class="bodyText">
+                            Perhaps the savoriest idiom on this list, the word <b>cheese</b> can refer to a person or thing that is important or splendid as well as to the delicious dairy product. The usage is thought to have origins in Urdu, from the Persian <em>chiz</em> meaning "thing." In common usage, "the big cheese" is a person of importance or authority, and cheese is often associated with smiling, based on the "say cheese" method of posing for pictures.                        </div>
+                    </div>
+                </div>
+                            <div class="slide slide_7">
+                    <div class="left-part">
+                        <div class="left-inner">
+                                                        <div class="img">
+                                                                    <img height="300" width="300" src="http://static.sfdict.com/sizedimage/sizedimage?width=300&height=300&url=http%3A%2F%2Fstatic.sfdict.com%2Fassets%2F2024-8234452-34.jpg" alt="eggshells" />
+                                                            </div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.dictionary.com/slideshows/food-idioms#eggshells">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_google_plusone_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_linkedin" addthis:title="Eight food idioms that are right under your nose by Dictionary.com" addthis:description="Our final idiom is our most delicate: walking on eggshells or taking great care not to upset someone. It is thought to have originated in politics when diplomats were described as having the remarkable ability to tread so lightly around difficult situations, it was as though they were walking on eggshells. In a nutshell, we hope you go bananas for food idioms. Whether or not they're your cup of tea, these terms are easy as pie to use and they'll make you the big cheese of any conversation! So go ahead and spill the beans, it's just like apples and oranges." addthis:url="http://www.dictionary.com/slideshows/food-idioms?slide=eggshells"></a>
+                                <a class="addthis_button_pinterest_share" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_button_email" addthis:title="Eight food idioms that are right under your nose by Dictionary.com"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+                            <!--
+                            <div>
+                                <textarea><iframe height="560" frameborder="0" width="560" scrolling="no" src="http://www.dictionary.com/slideshow-widget/food-idioms"></iframe></textarea>
+                            </div>
+                            -->
+                            <div style="clear: both; float: none"></div>
+                        </div>
+                        <div class="headword">
+                                <a>
+                                    Eggshells                                </a>
+                                                                    <div class="audio-wrapper cts-disabled">
+                                        <audio>
+                                            <source src="http://static.sfdict.com/audio/lunawav/E00/E0060500.ogg" type="audio/ogg">
+                                            <source src="http://static.sfdict.com/audio/E00/E0060500.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <div class="speaker"></div>
+                                    </div>
+                                                        </div>
+                        <div class="pron">
+                            [<span class="dbus_pron_b">eg</span>-shel]                        </div>
+                        <div class="bodyText">
+                            Our final idiom is our most delicate: <b>walking on eggshells</b> or taking great care not to upset someone. It is thought to have originated in politics when diplomats were described as having the remarkable ability to tread so lightly around difficult situations, it was as though they were walking on eggshells. In a nutshell, we hope you go bananas for food idioms. Whether or not they're your cup of tea, these terms are easy as pie to use and they'll make you the big cheese of any conversation! So go ahead and spill the beans, it's just like apples and oranges.                        </div>
+                    </div>
+                </div>
+                            </div>
+        <div class="right-part">
+            <div id="dcomSSHOW-300x250"><script type="text/javascript">adStatus.displayedSpots.push("dcomSSHOW-300x250");gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSSHOW-300x250");});});</script></div>            
+                <div class="popular-slideshow-box">
+                    <span>&nbsp;</span>
+                    <div class="box-title">More Popular Slideshows</div>
+                    <div class="list">
+                        <div>
+                            <a href="http://www.dictionary.com/slideshows/haveincommon_6_15" data-cts='{"linkId":"hqvkn4","infix":"","domain":"dictionary.com","clkpage":"slideshow","clkmod":"","clksite":"dict","clkld":0}'>                                What Do These 6 Words Have in Common?                            </a>
+                        </div>
+                        <div>
+                            <a href="http://www.dictionary.com/slideshows/five-english-words-without-a-rhyme" data-cts='{"linkId":"cg1e57","infix":"","domain":"dictionary.com","clkpage":"slideshow","clkmod":"","clksite":"dict","clkld":0}'>                                Five English words without a rhyme                            </a>
+                        </div>
+                        <div>
+                            <a href="http://www.dictionary.com/slideshows/american-foods" data-cts='{"linkId":"owdee6","infix":"","domain":"dictionary.com","clkpage":"slideshow","clkmod":"","clksite":"dict","clkld":0}'>                                The Origins of 8 Classic Summer Food Names                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                        <a href="http://www.dictionary.com/slideshows/haveincommon_6_15?prev=food-idioms.eggshells"  id="nextSlideshowLink"  style="display:none;" data-cts='{"linkId":"ar7cbe","infix":"","domain":"dictionary.com","clkpage":"slideshow","clkmod":"","clksite":"dict","clkld":0}'></a>
+
+        </div>
+
+        <div class="email-signup" id="email-signup">
+    <div class="signup-title">Love our Slideshows?</div>
+    <div class="signup-content">Sign up for our weekly<br/>Slideshow Snapshot email!</div>
+    <div class="signup-message"></div>
+    <form class="signup-form">
+        <input type="text" name="email" value="" placeholder="email address" />
+        <input type="submit" value="subscribe"/>
+    </form>
+    <div class="signup-close"></div>
+</div>
+
+    </div>
+    <div style="clear: both"></div>
+
+    <script type="text/javascript">var addthis_config = {"pubid": "ra-52a9bddb2308d439", "ui_email_note": "Hi,\r\nI read the Eight food idioms that are right under your nose slideshow and thought you should see it!"};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#async=1"></script>
+    <script type="text/javascript">addthis.init();</script>
+</div></div></div><footer class="footer-thin">
+    <div class="footer-container"  data-linkid='gy27eg'>
+        <div>
+            <ul class="footer-navbar">
+                <li class="footer-navbar-list">
+                    <a href="http://content.dictionary.com/">About</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://www.dictionary.com/terms">Terms & Privacy</a>
+                </li>
+            </ul>
+            <div class="footer-copyright">
+                &copy;&nbsp;2017 Dictionary.com, LLC.
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="http://app.dictionary.com/js/advertisement.js"></script>
+<script>
+    if (typeof window.canRunAds === 'undefined') {
+        var img = new Image(),
+        url = 'http://track.dictionary.com/main.gif?ev=a&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=slideshow&st=dict&ab=&dc=desktop';
+
+        url = url.replace('%40%40REFERRER%40%40', encodeURIComponent(document.referrer))
+            .replace('%40%40CACHEBUSTER%40%40', Math.floor((Math.random() * 899999999) + 100000000))
+            .replace('%40%40MSEG%40%40', (cookiesManager.getCookieValue('mseg') || ''));
+        img.src = url;
+    }
+</script>
+<script>
+    /*
+     Below immediately function provide support for browsers, which do not support modern standards (https://dom.spec.whatwg.org/)
+     partially taken from: plainjs.com
+    */
+    (function (e) {
+        'use strict';
+        e.matches = e.matches ||
+            e.matchesSelector ||
+            e.webkitMatchesSelector ||
+            e.msMatchesSelector ||
+            function (selector) {
+                var node = this, nodes = (node.parentNode || node.document).querySelectorAll(selector), i = -1;
+                while (nodes[++i] && nodes[i] != node);
+                return !!nodes[i];
+            };
+        e.closest = e.closest || function (css) {
+                var node = this;
+                while (node) {
+                    if (node.matches(css)) return node;
+                    else node = node.parentElement;
+                }
+                return null;
+            };
+        e.hasClass = e.hasClass || function (className) {
+                var node = this;
+                return node.classList ? node.classList.contains(className) : new RegExp('\\b' + className + '\\b').test(node.className);
+            };
+        e.addClass = e.addClass || function (className) {
+                var node = this;
+                if (node.classList) node.classList.add(className);
+                else if (!node.hasClass(node, className)) node.className += ' ' + className;
+            };
+        e.removeClass = e.removeClass || function(className) {
+                var node = this;
+                if (node.classList) node.classList.remove(className);
+                else node.className = node.className.replace(new RegExp('\\b' + className + '\\b', 'g'), '');
+            };
+        e.on = e.on || function (event, selector, callback, context) {
+                var el = context || document;
+                el.addEventListener(event, function (e) {
+                    var found, el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(this, el, e);
+                });
+            };
+    }(Element.prototype));
+</script><!-- Begin Quantcast Tag, part 2 -->
+<script type="text/javascript">
+if (typeof UserController === "undefined" || !UserController.isUnder13()) {
+    _qevents.push({qacct: "p-51zXP5Cc9sxvQ"});
+}
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-51zXP5Cc9sxvQ.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<!-- End Quantcast Tag, part 2 --><script>
+    /*global $, pageName, window */
+
+    var BCT = (function () {
+        'use strict';
+
+        var webTrackURL = 'http://track.dictionary.com/main.gif?ev=c&cl=%40%40LINKIDS%40%40&ci=%40%40ITEM%40%40&co=%40%40ORDINAL%40%40&ms=%40%40MSEG%40%40&ds=%40%40DESTINATION%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop',
+            query, originalQuery;
+
+        
+        /**
+         * Returns data, which will be logged.
+         *
+         * NOTE:
+         * Possible, that empty array will be returned.
+         */
+        function getData(target) {
+            var ctsData,
+                closestLinkIDElement,
+                data = {};
+
+            ctsData = JSON.parse(target.getAttribute('data-cts'));
+            if (ctsData !== null) {
+                data.linkId = ctsData.linkId;
+                data.item = "";
+                data.ordinal = ctsData.ordinal;
+            } else {
+                closestLinkIDElement = target.closest('[data-linkid]');
+                if (null !== closestLinkIDElement && null === target.closest('[data-type]')) {
+                    data.linkId = closestLinkIDElement.getAttribute('data-linkid');
+                    data.item = getItem(target);
+                    data.ordinal = getOrdinal(target, closestLinkIDElement);
+                }
+            }
+            return data;
+        }
+
+        function getItem(target) {
+            var closestWithItem = target.closest('[data-item]'),
+                item = '';
+
+            if (null !== closestWithItem) {
+                item = target.textContent.trim();
+            }
+
+            return item;
+        }
+
+        function getOrdinal(target, dataItem) {
+            var closestWithOrdinal,
+                value = '';
+
+            if (dataItem !== target) { // if element with linkid is not the anchor itself we are going deeper
+                closestWithOrdinal = target.closest('[data-ordinal]');
+                if (null !== closestWithOrdinal) {
+                    var links = closestWithOrdinal.querySelectorAll("a"),
+                        len = links.length;
+
+                    for (var i = 0; i < len; i++) {
+                        if (target === links[i]) {
+                            value = i + 1;
+                        }
+                    }
+                }
+            }
+            return value;
+        }
+
+        /**
+         * Returns data, which are generated always in the same way
+         */
+        function getCommonData(destination) {
+            var data = {};
+            data.cacheBuster = Math.floor((Math.random() * 899999999) + 100000000);
+            data.pageName = pageName;
+            data.mseg = getMsegValue();
+            data.destination = encodeURIComponent(destination);
+            return data;
+        }
+
+        /**
+         * Redirects user to destination
+         */
+        function redirectToDest(location) {
+            window.location = location;
+        }
+
+        /**
+         * Returns value of cookie based on name
+         */
+        function getCookieByName(name) {
+            var value = null,
+                cookies = document.cookie,
+                searchedCookie = cookies.indexOf(" " + name + "=");
+
+            // it's worth to check, if cookie is not first cookie
+            if (searchedCookie === -1) {
+                var checkFirstCookie = cookies.indexOf(name + "=");
+                searchedCookie = checkFirstCookie === 0 ? 0 : -1;
+            }
+
+            if (searchedCookie > -1) {
+                var startPositionOfValue = cookies.indexOf("=", searchedCookie) + 1,
+                    endPositionOfValue = cookies.indexOf(";", searchedCookie);
+
+                if (endPositionOfValue === -1) {
+                    endPositionOfValue = searchedCookie.length;
+                }
+
+                value = cookies.substring(startPositionOfValue,endPositionOfValue);
+            }
+
+            return value;
+        }
+
+        /**
+         * Returns value of mseg cookie
+         */
+        function getMsegValue() {
+            var msegVal;
+            if (typeof cookiesManager !== "undefined") {
+                msegVal = cookiesManager.getCookieValue("mseg");
+            } else {
+                msegVal = getCookieByName("mseg");
+            }
+
+            return msegVal || "";
+        }
+
+        /**
+         * Renders WebTrack URL
+         */
+        function renderWebTrackURL(data, destination) {
+            var commonData = getCommonData(destination);
+            return webTrackURL.replace('%40%40REFERRER%40%40', encodeURIComponent(document.referrer))
+                .replace('%40%40LINKIDS%40%40', data.linkId || "")
+                .replace('%40%40ITEM%40%40', encodeURIComponent(data.item) || "")
+                .replace('%40%40ORDINAL%40%40', data.ordinal || "")
+                .replace('%40%40CACHEBUSTER%40%40', commonData.cacheBuster || "")
+                .replace('%40%40PAGENAME%40%40', commonData.pageName || "")
+                .replace('%40%40MSEG%40%40', commonData.mseg || "")
+                .replace('%40%40DESTINATION%40%40', commonData.destination || "");
+        }
+
+        function logAndRedirect(data, destination) {
+            var logURL = renderWebTrackURL(data, destination),
+                image = new Image(),
+                timeout;
+
+            timeout = setTimeout(
+                function(){
+                    redirectToDest(destination);
+                },
+                2000
+            );
+
+            image.onload = image.onerror = function () {
+                clearTimeout(timeout);
+                redirectToDest(destination);
+            };
+
+            image.src = logURL;
+
+            return false;
+        }
+
+        /**
+         * Registers click event handler to body so it receives every click on anchor.
+         */
+        function attachHandler() {
+            var bodyTag = document.getElementsByTagName('body')[0];
+
+            bodyTag.on("click", 'a', function (elem, event) {
+                var target = event.target,
+                    enabled = target.closest('.cts-enabled'),
+                    disabled = target.closest('.cts-disabled'),
+                    destination = elem.getAttribute('href'),
+                    dataToLog;
+
+                if (typeof destination === "undefined") {
+                    return true;
+                }
+
+                if (target.hasClass('cts-clicked')) {
+                    return false;
+                }
+
+                //ACE-1060
+                if (disabled !== null && (enabled === null || disabled.childNodes.length < enabled.childNodes.length)) { return true }
+
+                dataToLog = getData(target);
+
+                // if object has no id it means that link shouldn't be tracked - follow the link
+                if (typeof dataToLog.linkId === "undefined") {
+                    return true;
+                }
+                event.preventDefault();
+
+                // mark this link as already clicked
+                target.addClass('cts-clicked');
+
+                return logAndRedirect(dataToLog, destination);
+            });
+        }
+
+        return {
+            attachHandler: attachHandler,
+            /**
+             * ::redirect() method is method used by oneClick module
+             */
+            redirect: function (ctsData, destinationHref, item) {
+                var data = {};
+                data.linkId = ctsData.linkId || ctsData.linkid;
+                data.item = item;
+                data.ordinal = '';
+                return logAndRedirect(data, destinationHref);
+            }
+        };
+    }());
+
+    /** Do the initial attachment to <body> links */
+    BCT.attachHandler();
+
+</script><script type="text/javascript" src="http://static.sfdict.com/app/js/require-37278.js"></script>
+<script type="text/javascript">
+    requirejs.config({
+            waitSeconds: 60,
+            baseUrl: "http://static.sfdict.com/dcom/js",
+            paths: {"appcore":"http:\/\/static.sfdict.com\/app\/js","options":"http:\/\/static.sfdict.com\/app\/js\/options-b826f","jquery":"http:\/\/static.sfdict.com\/app\/js\/jquery-1.11.3.min-4069b","slideshows":"slideshows-94459"},
+            shim: []        });
+        define("runtime-options", function() {
+        return {"subscriptionUrl":"http:\/\/app.dictionary.com\/api\/ajaxmailer\/subscription?pageName=%40%40PAGENAME%40%40&siteName=dict&ld=0&mseg=77","slideSlugs":["nutshell","beans","pie","apples","bananas","tea","cheese","eggshells"],"slug":"food-idioms","controllerURL":"http:\/\/www.dictionary.com\/slideshows","pageType":"fullPage","slide":false,"flashAudioPlayerPath":"http:\/\/static.sfdict.com\/app\/flash\/player.swf","CTSParams":{"infix":"","clkpage":"slideshow","clksite":"dict","clkld":0},"webTrack":{"clickInner":"http:\/\/track.dictionary.com\/main.gif?ev=n&tg=%40%40TARGET%40%40&ar=%40%40ADREFRESH%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","impressions":"http:\/\/track.dictionary.com\/main.gif?ev=i&lk=%40%40IMPRESSIONLINKIDS%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","pageview":"http:\/\/track.dictionary.com\/main.gif?ev=p&ct=%40%40CONTENTTITLE%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","click":"http:\/\/track.dictionary.com\/main.gif?ev=c&cl=%40%40LINKIDS%40%40&ci=%40%40ITEM%40%40&co=%40%40ORDINAL%40%40&ms=%40%40MSEG%40%40&ds=%40%40DESTINATION%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop"},"pageview":"{\"basePath\":\"http:\\\/\\\/track.dictionary.com\\\/track\\\/pageview\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"slideshow\",\"ldid\":0}}","click":"{\"basePath\":\"http:\\\/\\\/track.dictionary.com\\\/track\\\/click\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"slideshow\",\"ldid\":0}}","socialEvent":"{\"basePath\":\"http:\\\/\\\/track.dictionary.com\\\/track\\\/social\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"slideshow\",\"ldid\":0}}"};
+    });
+    require(["slideshows"])
+</script>
+<script>
+    (function (factory) {
+        if (typeof require === 'function') {
+            require(['jquery'], factory);
+        } else {
+            factory($);
+        }
+    }(function($) {
+        var impressionLinkIds = {};
+        $('[data-imp]').each(function () {
+            if ($(this).is(':visible')) {
+                var imp = $(this).data('imp').toString().split('|', 2);
+                if (impressionLinkIds[imp[0]] === undefined) {
+                    impressionLinkIds[imp[0]] = 0;
+                }
+                if (imp[1] !== undefined) {
+                    impressionLinkIds[imp[0]] += parseInt(imp[1]);
+                } else {
+                    impressionLinkIds[imp[0]] += 1;
+                }
+            }
+        });
+
+        var lkValue = '';
+        for (var linkId in impressionLinkIds) {
+            lkValue += linkId + (impressionLinkIds[linkId] > 1 ? '|' + impressionLinkIds[linkId] : '') + ','
+        }
+        if (lkValue.slice(-1) === ',') {
+            lkValue = lkValue.slice(0, -1);
+        }
+        if (lkValue != '') {
+            var ms = (typeof ms === 'undefined') ? cookiesManager.getCookieValue('mseg') || "" : ms;
+            new Image().src = "http://track.dictionary.com/main.gif?ev=i&pn=slideshow&st=dict&ab=&dc=desktop&lk=" + lkValue + "&ms=" + ms + "&rf=" + encodeURIComponent(document.referrer) + "&cb=" + Math.floor((Math.random()*899999999)+100000000);
+        }
+    }));
+</script>
+    </body>
+    </html>
